@@ -6,13 +6,14 @@
 /* 10px/16px */
 html {
   font-size: 62.5%;
+  line-height: 1;
 }
 
 .section-grid {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20rem 20rem 20rem 20rem;
+  padding: 18rem 18rem 18rem 18rem;
   color: hsl(30, 38%, 92%);
 }
 .container {
@@ -23,24 +24,115 @@ html {
   grid-template-columns: repeat(2, 1fr);
   border-radius: 11px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  /* width: 100%;
-  height: 100vh; */
+  width: 100%;
+  height: 50%;
 }
 .product-image {
   border-top-left-radius: 11px;
   border-bottom-left-radius: 11px;
-  height: 100vh;
+  /* height: 54%; */
   width: 100%;
 }
 .main-content {
-  padding: 2.5rem;
+  padding: 4rem;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 p:is(.primary-heading, .second, .amount) {
   color: hsl(228, 12%, 48%);
-  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  margin-bottom: 6rem;
+}
+p:is(.primary-heading) {
+  margin-bottom: 6rem;
 }
 .main-content > h3 {
   color: hsl(212, 21%, 14%);
-  font-size: 4rem;
-  margin-bottom: 3rem;
+  font-size: 4.8rem;
+  margin-bottom: 4rem;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+}
+p:is(.second) {
+  font-size: 2.4rem;
+  /* letter-spacing: 2px; */
+}
+div:is(.small) {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 12rem;
+}
+h3:is(.sec-amount) {
+  font-size: 3.4rem;
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+}
+p:is(.primary-amount) {
+  font-size: 2rem;
+  color: hsl(228, 12%, 48%);
+}
+button {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  gap: 1.8rem;
+  padding: 2.6rem 2.6rem 2.6rem 2.6rem;
+  background: hsl(158, 36%, 37%);
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+  margin-top: 6rem;
+  border: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+img:is(.icon) {
+  margin-left: 10rem;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2.5rem;
+  font-weight: 700;
+  gap: 4rem;
+}
+@media (max-width: 23.43em) {
+  html {
+    font-size: 43.75%;
+  }
+  .section-grid {
+    padding: 3px 3px 3px 3px;
+  }
+  .product-image {
+    height: 250px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .main-content {
+    padding: 1.4rem;
+  }
+  p:is(.primary-heading, .second, .amount) {
+    margin-bottom: 1rem;
+  }
+  div:is(.small) {
+    margin-top: 5rem;
+    gap: 2rem;
+    margin-bottom: 1.4rem;
+  }
+  p:is(.primary-amount) {
+    margin-right: 2rem;
+  }
+  footer {
+    font-size: 2rem;
+  }
 }
